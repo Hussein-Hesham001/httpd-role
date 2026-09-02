@@ -1,0 +1,13 @@
+---
+# handlers file for httpd-role
+- name: restart httpd
+  service:
+    name: httpd
+    state: restarted
+    enabled: yes
+
+- name: restart firewall
+  service:
+    name: firewalld
+    state: restarted
+    enabled: yes
